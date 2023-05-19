@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>edit profile page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/profile.css">
+        <link rel="stylesheet" href="../../css/header.css">
+    </head>
+    <body>
+        <div class="card">
+            <img src="../../assets/images/testi 2.png" alt="John" style="width:50%">
+
+            <form class="edit">
+                <label> First name : </label>
+                <input type="text" id="first_name" required>
+
+                <label> Last name : </label>
+                <input type="text" id="last_name" required>
+
+                <label> Email : </label>
+                <input type="email" id="email" required disabled>
+
+                <p>
+                    <button type="submit" class="btn" onclick="update(event)">save</button>
+                </p>
+  
+            </form>
+        </div>
+        <script>
+const users = JSON.parse(localStorage.getItem("users"));
+const unique_id = JSON.parse(localStorage.getItem("unique_id"));
+console.log(users);
+function profile_data(e) {
+  return e.email == unique_id;
+}
+const user_data = users.find(profile_data);
+
+document.getElementById("first_name").value = user_data.first_name;
+document.getElementById("last_name").value = user_data.last_name;
+document.getElementById("email").value = user_data.email;
+
+function update(event) {
+  event.preventDefault();
+  const up_first_name = document.getElementById("first_name").value;
+  const up_last_name = document.getElementById("last_name").value;
+
+  user_data.first_name = up_first_name;
+  user_data.last_name = up_last_name;
+
+  localStorage.setItem("users", JSON.stringify(users));
+  window.location.href = "./profile.html";
+}
+
+function logout(event) {}
+</script>
+        <script src="/pages/index/header.js"></script>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>edit_form</form>
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/register.css">
+        <link rel="stylesheet" href="../../css/header.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap"
+            rel="stylesheet">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+    </style>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <form role="form">
+            <div class="find details">
+                <label> Enter the Place name</label>
+                <input type="text" id="search_place">
+
+                <button type="submit" id="find_details">Find details</button>
+            </div>
+
+            <div>
+                <label for="image">
+                    <b>Image</b>
+                </label>
+                <input type="text" placeholder="enter your url" id="image">
+            </div>
+            <div>
+                <label for="heading">
+                    <b>Name</b>
+                </label>
+                <input type="text" placeholder="escape room" id="place_name">
+            </div>
+            <div>
+                <label> place name</label>
+                <select id="area">
+                    <option> select </option>
+
+                </select>
+            </div>
+            OR
+            <div>
+                <label> Category name</label>
+                <select id="category">
+                    <option> select </option>
+                    <option> Beach </option>
+                    <option> Amusement parks </option>
+                    <option> Malls </option>
+                    <option> Aquarium </option>
+                    <option> Parks & Rooms </option>
+
+                </select>
+                <BR>
+            </div>
+
+            <div>
+                <label for="heading">
+                    <b>Description</b>
+                </label>
+                <input type="text" placeholder="short description" id="description">
+            </div>
+
+            <div>
+                <label> For more details </label>
+                <input type="text" id="detail_page">
+            </div>
+
+            <div>
+                <label for="image">Banner</label>
+                <input type="text" placeholder="enter your url" id="banner">
+            </div>
+
+            <div>
+                <label for="text">Description</label>
+                <textarea name="paragraph_text" cols="50" rows="10" id="descptn"></textarea>
+
+                <label for="text">Information</label>
+                <textarea name="paragraph_text" cols="50" rows="10" id="info"></textarea>
+            </div>
+
+            <div>
+                <label for="image">Famous Food Branches</label>
+                <br>
+                <label>Branch 1</label>
+                <input type="text" placeholder="Enter your url" id="img1">
+                <input type="text" placeholder="Enter food branch name" id="name1">
+                <input type="text" placeholder="Opening & closing time" id="abt1">
+                <br>
+                <label>Branch 2</label>
+                <input type="text" placeholder="Enter your url" id="img2">
+                <input type="text" placeholder="Enter food branch name" id="name2">
+                <input type="text" placeholder="Opening & closing time" id="abt2">
+                <br>
+                <label>Branch 3</label>
+                <input type="text" placeholder="Enter your url" id="img3">
+                <input type="text" placeholder="Enter food branch name" id="name3">
+                <input type="text" placeholder="Opening & closing time" id="abt3">
+
+                <br>
+                <label>Branch 4</label>
+                <input type="text" placeholder="Enter your url" id="img4">
+                <input type="text" placeholder="Enter food branch name" id="name4">
+                <input type="text" placeholder="Opening & closing time " id="abt4">
+                <br>
+                <label>Branch 5</label>
+                <input type="text" placeholder="Enter your url" id="img5">
+                <input type="text" placeholder="Enter food branch name" id="name5">
+                <input type="text" placeholder="Opening & closing time " id="abt5">
+
+            </div>
+
+            <div>
+                <label for="image">Popular Branches</label>
+                <br>
+                <label>Store 1</label>
+                <input type="text" placeholder="Enter your url" id="image1">
+                <input type="text" placeholder="Enter Brand name" id="brandname1">
+                <input type="text" placeholder="About Brand " id="abt_brand1">
+                <br>
+                <label>Store 2</label>
+                <input type="text" placeholder="Enter your url" id="image2">
+                <input type="text" placeholder="Enter Brand name" id="brandname2">
+                <input type="text" placeholder="About Brand " id="abt_brand2">
+                <br>
+                <label>Store 3</label>
+                <input type="text" placeholder="Enter your url" id="image3">
+                <input type="text" placeholder="Enter Brand name" id="brandname3">
+                <input type="text" placeholder="About Brand " id="abt_brand3">
+                <br>
+
+                <label>Store 4</label>
+                <input type="text" placeholder="Enter your url" id="image4">
+                <input type="text" placeholder="Enter Brand name" id="brandname4">
+                <input type="text" placeholder="About Brand " id="abt_brand4">
+                <br>
+
+                <label>Store 5</label>
+                <input type="text" placeholder="Enter your url" id="image5">
+                <input type="text" placeholder="Enter Brand name" id="brandname5">
+                <input type="text" placeholder="About Brand " id="abt_brand5">
+                <br>
+
+                <label>Store 6</label>
+                <input type="text" placeholder="Enter your url" id="image6">
+                <input type="text" placeholder="Enter Brand name" id="brandname6">
+                <input type="text" placeholder="About Brand " id="abt_brand6">
+                <br>
+                <label>Store 7</label>
+                <input type="text" placeholder="Enter your url" id="image7">
+                <input type="text" placeholder="Enter Brand name" id="brandname7">
+                <input type="text" placeholder="About Brand " id="abt_brand7">
+                <br>
+                <label>Store 8</label>
+                <input type="text" placeholder="Enter your url" id="image8">
+                <input type="text" placeholder="Enter Brand name" id="brandname8">
+                <input type="text" placeholder="About Brand " id="abt_brand8">
+                <br>
+            </div>
+
+            <button type="button" class="button" id="update">Update</button>
+            <button type="button" class="button" id="delete">Delete</button>
+
+        </form>
+
+        <script>
+        const localcty = JSON.parse(localStorage.getItem("category_list"));
+        for (let i = 0; i < localcty.length; i++) {
+  const cty_li = document.createElement("option");
+
+          cty_li.setAttribute("value", localcty[i].category);
+          cty_li.innerText = localcty[i].category;
+
+          document.querySelector("#area").append(cty_li);
+          console.log(cty_li);
+        }
+
+        // -------------------------- find details and update----------------------------------------------
+
+        //get value from local storage
+        const form = document.querySelector(".form");
+
+        // const search_place = document.getElementById("search_place").value;
+
+        const image_link = document.getElementById("image");
+        const name = document.getElementById("place_name");
+        const area = document.getElementById("area");
+        const category = document.getElementById("category");
+        const Description = document.getElementById("description");
+        const detail_page_link = document.getElementById("detail_page");
+        const Banner = document.getElementById("banner");
+        const D_description = document.getElementById("descptn");
+        const I_information = document.getElementById("info");
+
+        const B_1_img = document.getElementById("img1");
+        const B_2_img = document.getElementById("img2");
+        const B_3_img = document.getElementById("img3");
+        const B_4_img = document.getElementById("img4");
+        const B_5_img = document.getElementById("img5");
+
+        const B_1_name = document.getElementById("name1");
+        const B_2_name = document.getElementById("name2");
+        const B_3_name = document.getElementById("name3");
+        const B_4_name = document.getElementById("name4");
+        const B_5_name = document.getElementById("name5");
+
+        const B_1_abt = document.getElementById("abt1");
+        const B_2_abt = document.getElementById("abt2");
+        const B_3_abt = document.getElementById("abt3");
+        const B_4_abt = document.getElementById("abt4");
+        const B_5_abt = document.getElementById("abt5");
+
+        const store_1_img = document.getElementById("image1");
+        const store_2_img = document.getElementById("image2");
+        const store_3_img = document.getElementById("image3");
+        const store_4_img = document.getElementById("image4");
+        const store_5_img = document.getElementById("image5");
+        const store_6_img = document.getElementById("image6");
+        const store_7_img = document.getElementById("image7");
+        const store_8_img = document.getElementById("image8");
+
+        const store_1_name = document.getElementById("brandname1");
+        const store_2_name = document.getElementById("brandname2");
+        const store_3_name = document.getElementById("brandname3");
+        const store_4_name = document.getElementById("brandname4");
+        const store_5_name = document.getElementById("brandname5");
+        const store_6_name = document.getElementById("brandname6");
+        const store_7_name = document.getElementById("brandname7");
+        const store_8_name = document.getElementById("brandname8");
+
+        const store_1_abt = document.getElementById("abt_brand1");
+        const store_2_abt = document.getElementById("abt_brand2");
+        const store_3_abt = document.getElementById("abt_brand3");
+        const store_4_abt = document.getElementById("abt_brand4");
+        const store_5_abt = document.getElementById("abt_brand5");
+        const store_6_abt = document.getElementById("abt_brand6");
+        const store_7_abt = document.getElementById("abt_brand7");
+        const store_8_abt = document.getElementById("abt_brand8");
+
+        document.getElementById("find_details").addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const search_place = document.getElementById("search_place").value;
+          console.log(search_place);
+          const allPlaces = JSON.parse(localStorage.getItem("places"));
+          const place = allPlaces.find((e) => e.place_name === search_place);
+          console.log(place);
+
+          if (place) {
+            category.value = place.category_name;
+            area.value = place.area;
+            name.value = place.place_name;
+            image_link.value = place.image_link;
+            Description.value = place.description;
+            detail_page_link.value = place.detail_page;
+            Banner.value = place.banner;
+            D_description.value = place.Descptn;
+            I_information.value = place.Information;
+
+            B_1_img.value = place.branch1Img;
+            B_2_img.value = place.branch2Img;
+            B_3_img.value = place.branch3Img;
+            B_4_img.value = place.branch4Img;
+            B_5_img.value = place.branch5Img;
+
+            B_1_name.value = place.branch1Name;
+            B_2_name.value = place.branch2Name;
+            B_3_name.value = place.branch3Name;
+            B_4_name.value = place.branch4Name;
+            B_5_name.value = place.branch5Name;
+
+            B_1_abt.value = place.branch1time;
+            B_2_abt.value = place.branch1time;
+            B_3_abt.value = place.branch1time;
+            B_4_abt.value = place.branch1time;
+            B_5_abt.value = place.branch1time;
+
+            store_1_img.value = place.store1Img;
+            store_2_img.value = place.store2Img;
+            store_3_img.value = place.store3Img;
+            store_4_img.value = place.store4Img;
+            store_5_img.value = place.store5Img;
+            store_6_img.value = place.store6Img;
+            store_7_img.value = place.store7Img;
+            store_8_img.value = place.store8Img;
+
+            store_1_name.value = place.store1Name;
+            store_2_name.value = place.store2Name;
+            store_3_name.value = place.store3Name;
+            store_4_name.value = place.store4Name;
+            store_5_name.value = place.store5Name;
+            store_6_name.value = place.store6Name;
+            store_7_name.value = place.store7Name;
+            store_8_name.value = place.store8Name;
+
+            store_1_abt.value = place.store1Abt;
+            store_2_abt.value = place.store2Abt;
+            store_3_abt.value = place.store3Abt;
+            store_4_abt.value = place.store4Abt;
+            store_5_abt.value = place.store5Abt;
+            store_6_abt.value = place.store6Abt;
+            store_7_abt.value = place.store7Abt;
+            store_8_abt.value = place.store8Abt;
+
+            document.getElementById("update").onclick = function (event) {
+              event.preventDefault();
+
+              updateinfo();
+            };
+
+            function updateinfo() {
+      const categoryName = category.value;
+              const Area = area.value;
+              const placeName = name.value;
+              const image = image_link.value;
+              const dscrptn = Description.value;
+              const detailPage = detail_page_link.value;
+              const banner = Banner.value;
+              const Information = I_information.value;
+              const Descptn = D_description.value;
+              const branch1Img = B_1_img.value;
+              const branch2Img = B_2_img.value;
+              const branch3Img = B_3_img.value;
+              const branch4Img = B_4_img.value;
+              const branch5Img = B_5_img.value;
+
+      //             // Update places deatils in localstorage
+
+              place.category_name = categoryName;
+              place.area = Area;
+              place.place_name = placeName;
+              place.image_link = image;
+              place.description = dscrptn;
+              place.detail_page = detailPage;
+
+              localStorage.setItem("places", JSON.stringify(allPlaces));
+              alert("Updated successfully!");
+            }
+          }
+        });
+
+        // document.getElementById("update_details").setAttribute("disabled", true);
+
+// //  delete page
+// document.getElementById("delete_details").addEventListener("click", (event) => {
+//     event.preventDefault();
+
+//     const uniqueId = unique_id.value;
+//     const doctor_details = JSON.parse(localStorage.getItem('doctor_detail'));
+//     const doctorIndex = doctor_details.findIndex(detail =>
+//         detail.Doctor_name === uniqueId
+//     );
+
+//     if (doctorIndex > -1) {
+//         doctor_details.splice(doctorIndex, 1);
+//         localStorage.setItem('doctor_detail', JSON.stringify(doctor_details));
+//         alert("Doctor details deleted successfully");
+//         document.querySelector('form').reset();
+
+//     }
+
+// })
+    </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+        <script src="/pages/index/header.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>contact</title>
+        <link rel="stylesheet" href="../../css/contact.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+</style>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <section>
+            <div class="flex">
+                <div class="para">
+                    <h1> Contact Us</h1>
+                    <p>Get in touch with us</p>
+                    <p>SR-Travel Guide will provide you the informations about the places in chennai. You will get clear information besed on the our view and people reviews. </p>
+                    <h1>Phone</h1>
+                    <p> 9171787555</p>
+                    <h1>Email</h1>
+                    <p> saranyasou008@gmail.com</p>
+
+                </div>
+                <div class="contact-form">
+                    <form class="form">
+                        <h1 class="heading"> Contact Us </h1>
+                        <div>
+                            <option class="font">NAME*</option>
+                            <input class="box" id="name"> 
+                        </div>
+                        <div>
+                            <option type="email" class="font">EMAIL*</option>
+                            <input class="box" id="email"> 
+    
+                            <div>
+                                <option type="text" class="font">Subject*</option>
+                                <input class="box" id="subject"> 
+                            </div>
+                            <div>
+                                <option class="font">MESSAGE*</option>
+                                <input class="box-big" id="message">   
+                            </div> 
+                            <button class="btn1" type="submit" onclick="submit()"> Send Message</button>
+            </form>
+                        </div>
+        </div>
+    </section>
+
+                        <script>function submit() {
+      const email = document.getElementById("name").value;
+      const name = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      console.log(name);
+      console.log(email);
+      console.log(subject);
+      console.log(message);
+
+      localStorage.setItem("email", email);
+      localStorage.setItem("name", name);
+      localStorage.setItem("subject", subject);
+      localStorage.setItem("message", message);
+
+        window.location.href = "../other page/login.html";
+}
+    </script>
+                        <script src="/pages/index/header.js"></script>
+</body>
+</html>

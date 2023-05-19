@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>card list page</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/places_list.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap"
+            rel="stylesheet">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+    </style>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <h1> Fun Places</h1>
+        <section class="section-1">
+        </section>
+
+        <section>
+            <div class="footer">
+                <div class="footer_1">
+                    <div class="flex-footer">
+                        <img src="../../assets/images/web logo.png" width="80" height="60" alt="logo">
+                        <h4>TRAVEL GUIDE</h4>
+                    </div>
+                    <p>
+                        <b>Contact</b>
+                    </p>
+                    <p>Email: saransou008@gmail.com</p>
+                </div>
+
+                <div class="footer_2">
+                    <ul>
+                        <h3>Quick Links</h3>
+                        <a href="../index/about us.html">
+                            <li> About</li>
+                        </a>
+                        <a href="../index/suggest.html">
+                            <li> Suggest</li>
+                        </a>
+                        <a href="../index/contact.html">
+                            <li> Contact Us</li>
+                        </a>
+            </div>
+                        <div class="footer_3">
+                            <h2>
+                                <b> Subscribe </b>
+                            </h2>
+                            <p> To get more information and keep updated subscribe</p>
+                            <input type="text" placeholder="Email Address" class="input">
+                            <button class="btn-1" type="button"> Send</button>
+                        </div>
+        </div>
+    </section>
+
+                        <script>
+        const a = JSON.parse(localStorage.getItem("places"));
+        
+        const key =
+  new URLSearchParams(window.location.search).get("place") ||
+  new URLSearchParams(window.location.search).get("category") ||
+  new URLSearchParams(window.location.search).get("place_name");
+        console.log(key);
+
+        const filteredplaces = a.filter((e) => e.category_name === key);
+
+        for (i = 0; i < a.length; i++) {
+            const { area } = a[i];
+            const { category_name } = a[i];
+            const { place_name } = a[i];
+        
+          if (key === area || key === category_name || key === place_name) {
+            const placeSection = `<div class="flex">
+            <div class="img">
+                <img src="${a[i].image_link}" alt="trampoline park" height="300px" width="450px">
+            </div>
+            <div class="para">
+                <h2>${a[i].place_name}</h2>
+                <p><b> About</b></p>
+                <p > ${a[i].description}</p>
+                <p> For more information <a class="hello" href= "../product_detail pages/Mall_details.html?name=${place_name}&category=${category_name}"}>click here</a></p>
+                <p> Rating:</p> 
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    </div>
+                
+            </div>`;
+            document
+      .querySelector("section.section-1")
+      .insertAdjacentHTML("beforeend", placeSection);
+          }
+        }
+
+//    let detailPage = document.querySelectorAll('a.hello')
+//    console.log(detailPage);
+//    detailPage.forEach((type)=>{
+//         type.addEventListener((e)=>{
+// let unique =  this.dataset.id
+// console.log(1);
+// location.href=""
+
+//         })
+//     })
+    </script>
+                        <script src="../index/header.js"></script>
+
+</body>
+</html>

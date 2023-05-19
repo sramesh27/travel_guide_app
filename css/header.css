@@ -1,0 +1,112 @@
+#profile{
+    width:126px;
+    height:70px;
+    margin-top: -15px;
+  }
+  .page-title{
+    display:flex;
+  }
+  #search-icon{
+    padding: 10px 20px; 
+    margin-right: 5px;
+    position: relative;
+    right: 150px;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .search-bar{
+    text-align: center;
+    margin-left:30px;
+  
+  }
+  #search{
+    width:500px;
+    padding: 15px;
+    margin:10px;
+    border-radius: 30px;
+  }
+  
+  .navbar-1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .navbar ul{
+    display:flex;
+    list-style: none;
+    text-decoration: none;
+  }
+  header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* position:relative;
+    bottom:800px; */
+  }
+  .header{
+    display:flex;
+    align-items: center;
+  }
+  .header h3{
+    color:black;
+    width: 80%;
+  }
+  .icon{
+    position:relative;
+    right:70px;
+    top:7px;
+  }
+  .navbar{
+   
+    text-decoration: none;
+    max-width:630px;
+    margin-top: 30px;
+  }
+  .navbar a{
+    text-decoration: none;
+    color:black;
+    align-content: space-between;
+  }
+  .navbar li{
+    padding:10px;
+  }
+  .dropbtn {
+    background-color:transparent;
+    color:black;
+    padding: 5px;
+    font-size: 15px;
+    font-weight:bold;
+    border: none;
+    position:relative;
+    bottom:18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+  
+  #cate_list{
+    display:flex;
+    flex-direction: column;
+  }

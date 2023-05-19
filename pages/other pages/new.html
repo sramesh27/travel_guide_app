@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<script>
+    // const places_list_forward =
+//     [
+//         {
+//             "image": {
+//                 "source": "../../assets/images/trampoline.jpg",
+//                 "alt": "trampoline park",
+//             },
+//             "name": "Airborne Trampoline park",
+//             "description": "Airborne - The Trampoline Park In Nungambakkam is bae for a number of reasons. Not only does it present a fresh break from your monotonous cafe and movie outings with friends.",
+//             "information": {
+//                 "text": "Click here",
+//                 "source": "../../pages/other pages/trampoline.html"
+//             },
+//         },
+//         {
+//             "image": {
+//                 "source": "../../assets/images/Soap-Football-1.jpg",
+//                 "alt": "Soap football",
+//             },
+//             "name": "Soap football",
+//             "description": "Soap Football is one of the funnest games ever! You do everything, walk, run and slide, but wait....not on grass, but on a soapy surface.",
+//             "information": {
+//                 "text": "Click here",
+//                 "source": "../../pages/other pages/trampoline.html"
+//             },
+//         },
+//         {
+//             "image": {
+//                 "source": "../../assets/images/sathyam cinema.jpg",
+//                 "alt": "sathyam cinimas",
+//             },
+//             "name": "sathyam cinimas",
+//             "description": "The Maker of Memories, Sathyam is Southern India's Iconic Home of Cinema, welcoming everyone to enjoy the ultimate cinematic experience.",
+//             "information": {
+//                 "text": "Click here",
+//                 "source": "../../pages/other pages/trampoline.html"
+//             },
+//         }
+//     ]
+// const places_list_reverse =
+//     [
+//         {
+//             "name": "Gameistry",
+//             "description": "Gameistry Entertainment is Chennai's 1st and largest Board Gaming venture.",
+//             "information": {
+//                 "text": "Click here",
+//                 "source": "../../pages/other pages/trampoline.html"
+//             },
+//             "image": {
+//                 "source": "../../assets/images/gameistry.jpg",
+//                 "alt": "gameistry",
+//             },
+//         },
+//         {
+//             "image": {
+//                 "source": "../../assets/images/escaperoom.jpg",
+//                 "alt": "escape room",
+//             },
+//             "name": "Escape Room",
+//             "description": "Freeing India Escape Rooms with 2 locations in Chennai features unique, out of the world themes designed to provide mind-bending entertainment.",
+//             "information": {
+//                 "text": "Click here",
+//                 "source": "../../pages/other pages/trampoline.html"
+//             },
+//         },
+//     ]
+
+const nungambakkam = JSON.parse(localStorage.getItem("nungambakkam_details"));
+let div_flex;
+let div_img;
+let div_image;
+let div_para;
+let div_about_p;
+let div_about_b;
+let div_text;
+let div_text_2;
+let div_text_a;
+
+for (i = 0; i < nungambakkam.length; i++) {
+  div_flex = document.createElement("div");
+      div_flex.setAttribute("class", "flex");
+      document.querySelector(".section-1").append(div_flex);
+      console.log(div_flex);
+
+      div_img = document.createElement("div");
+      div_img.setAttribute("class", "img");
+      div_flex.append(div_img);
+
+      div_image = document.createElement("img");
+      div_image.setAttribute("src", nungambakkam[i].image_link);
+      div_image.setAttribute("alt", "");
+      div_img.append(div_image);
+
+      div_para = document.createElement("div");
+      div_para.setAttribute("class", "para");
+      div_flex.append(div_para);
+
+      heading = document.createElement("h2");
+      heading.innerText = nungambakkam[i].place_name;
+      div_para.append(heading);
+
+      div_about_p = document.createElement("p");
+      div_para.append(div_about_p);
+
+      div_about_b = document.createElement("b");
+      div_about_b.innerText = "About";
+
+      // div_about_b.innerText = (about);
+      div_about_p.append(div_about_b);
+
+      div_text = document.createElement("p");
+      div_text.innerText = nungambakkam[i].description;
+      div_para.append(div_text);
+
+      div_text_2 = document.createElement("p");
+      // const more_details = places_list[0]["more_detail"];
+      // const click_here = places_list[0]["information"]["text"];
+      div_text_2.innerText = "For more details ";
+      div_para.append(div_text_2);
+
+      div_text_a = document.createElement("a");
+      // div_text_a.setAttribute("href", places_list_forward[i]["information"]["source"]);
+      div_text_a.innerText = "Click here";
+      div_text_2.append(div_text_a);
+
+      for (j = 0; j < 5; j++) {
+        star_span = document.createElement("span");
+        star_span.setAttribute("class", "fa fa-star checked");
+        star_span.setAttribute("style", "font-size:24px");
+        div_para.append(star_span);
+      }
+
+  div_flex = document.createElement("div");
+      div_flex.setAttribute("class", "flex-2");
+      document.querySelector(".section-1").append(div_flex);
+      console.log(div_flex);
+
+      div_para = document.createElement("div");
+      div_para.setAttribute("class", "para");
+      div_flex.append(div_para);
+
+      heading = document.createElement("h2");
+      heading.innerText = places_list_reverse[i].name;
+      div_para.append(heading);
+
+      div_about_p = document.createElement("p");
+      div_para.append(div_about_p);
+
+      div_about_b = document.createElement("b");
+      div_about_b.innerText = "About";
+      div_about_p.append(div_about_b);
+
+      div_text = document.createElement("p");
+      div_text.innerText = places_list_reverse[i].description;
+      div_para.append(div_text);
+
+      div_text_2 = document.createElement("p");
+      div_text_2.innerText = "For more details ";
+      div_para.append(div_text_2);
+
+      div_text_a = document.createElement("a");
+      div_text_a.setAttribute("href", places_list_reverse[i].information.source);
+      div_text_a.innerText = "Click here";
+      div_text_2.append(div_text_a);
+
+      for (j = 0; j < 5; j++) {
+        star_span = document.createElement("span");
+        star_span.setAttribute("class", "fa fa-star checked");
+        star_span.setAttribute("style", "font-size:24px");
+        div_para.append(star_span);
+      }
+
+      div_img = document.createElement("div");
+      div_img.setAttribute("class", "img");
+      div_flex.append(div_img);
+
+      div_image = document.createElement("img");
+      div_image.setAttribute("src", places_list_reverse[i].image.source);
+      div_image.setAttribute("alt", places_list_reverse[i].image.alt);
+      div_img.append(div_image);
+
+      document.querySelector("section.section-1").append(div_flex);
+}
+</script>

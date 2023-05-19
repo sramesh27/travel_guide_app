@@ -1,0 +1,86 @@
+<!-- Add icon library -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>profile page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/profile.css">
+        <link rel="stylesheet" href="../../css/header.css">
+    </head>
+
+    <body>
+        <div class="card">
+            <img src="../../assets/images/testi 2.png" alt="John" style="width:50%">
+
+            <form>
+                <label>First name : </label>
+                <input type="text" id="first_name" pattern="[a-z A-Z]+" required readonly>
+
+                <label>Last name : </label>
+                <input type="text" id="last_name" pattern="[a-z A-Z]+" required readonly>
+
+                <label>Email : </label>
+                <input type="email" id="email" required disabled>
+
+                <a href="../index/edit profile.html">
+                    <button class="btn" type="button"> Edit</button> 
+                </a>
+                <!-- <button type="button"> <a href="../index/edit profile.html">Edit</a></button> -->
+                <!-- <p><button type="button" onclick="del(event)"> Delete </button></p> -->
+
+                <button type="button" id="logout" class = "btn" value="Logout">logout</button>
+
+            </form>
+    
+        </div>
+        <script>
+    const users = JSON.parse(localStorage.getItem("users"));
+    const unique_id = JSON.parse(localStorage.getItem("unique_id"));
+
+    function profile_data(e) {
+      return e.email == unique_id;
+    }
+    
+    const user_data = users.find(profile_data);
+
+    document.getElementById("first_name").value = user_data.first_name;
+    document.getElementById("last_name").value = user_data.last_name;
+    document.getElementById("email").value = user_data.email;
+
+    function del(event) {
+      if (confirm("Are you sure you want to delete your profile")) {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const unique_id = JSON.parse(localStorage.getItem("unique_id"));
+        [];
+        function profile_data(e) {
+          return e.email == unique_id;
+        }
+        const user_data = users.find(profile_data);
+
+        const indexOfUser = users.indexOf(user_data);
+
+        console.log(indexOfUser);
+
+        users.splice(indexOfUser, 1);
+        console.log(users);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+    }
+
+    const logout_btn = document.getElementById("logout");
+    console.log(logout_btn);
+    logout_btn.addEventListener("click", logout);
+
+    function logout() {
+      localStorage.setItem("unique_id", JSON.stringify(""));
+      window.location.href = "../index/login.html";
+    }
+      </script>
+        <script src="../index/header.js"></script>
+  
+    </body>
+</html>

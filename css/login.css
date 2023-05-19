@@ -1,0 +1,88 @@
+body{
+    max-width: fit-content;
+}
+.container{
+    border-style: solid;
+    max-width:fit-content;
+    padding:30px 30px 50px 30px;
+    border-radius: 0px 20px 20px 0px;
+    background-color:rgba(243, 243, 243, 0.868);
+    border-color:rgba(243, 243, 243, 0.868);
+    box-shadow: 5px 0px 0px 0px;
+}
+.box{
+    width:250px;
+    height:30px;
+    border-radius: 5px;
+}
+.img{
+    filter: blur(7px);
+    width: 100%;
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+.img-small{
+    border-radius: 20px 0px 0px 20px;
+}
+.password{
+    position:relative;
+    left:130px;
+    bottom:10px;
+    color:rgb(110, 105, 105);
+}
+.btn{
+    position:relative;
+    top:10px;
+    left:70px;
+    background-color: rgb(72, 72, 206);
+    color:white;
+    padding:5px 30px;
+    /* border-radius: 10px; */
+    border-color:white;
+}
+.btn1{
+    position:relative;
+    top:40px;
+    left:20px;
+    background-color: rgb(245, 245, 249);
+    color:black;
+    padding:10px 10px 10px 50px;
+    border-radius: 10px;
+    border-color:white;
+}
+/* .btn2{
+    position:relative;
+    top:60px;
+    left:20px;
+    background-color: rgb(69, 69, 205);
+    color:white;
+    padding:10px 10px 10px 50px;
+    border-radius: 10px;
+    border-color:white;
+} */
+.heading{
+    margin-left:70px;
+    font-size:xx-large;
+}
+.facebook{
+    position: relative;
+    top:70px;
+    right:180px;
+}
+.google{
+    position: relative;
+    top:45px;
+    right:155px;
+
+}
+.flex{
+    display:flex;
+    position:absolute;
+    top:250px;
+    /* bottom:700px; */
+    left:250px;
+}
+.font-box{
+    margin-top:10px;
+}

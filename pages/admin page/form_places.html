@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Add_place_form</form>
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- <link rel = "stylesheet" href="/css/register.css"> -->
+        <link rel = "stylesheet" href="/css/add_place_form.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap"
+            rel="stylesheet">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <form role="form">
+            <div>
+                <label for="image">
+                    <b>Image</b>
+                </label>
+                <input type="text" placeholder="enter your url" id="image">
+            </div>
+       
+            <div>
+                <label for="heading">
+                    <b>Name</b>
+                </label>
+                <input type="text" placeholder="Enter Place name" id="place_name">
+            </div>
+        
+            <div>
+                <label> place name</label>
+                <select id="area">
+                    <option> select </option>
+
+                </select> OR
+
+                <label> Category name</label>
+                <select id="category">
+                    <option> select </option>
+                    <option> Beach </option>
+                    <option> Amusement parks </option>
+                    <option> Malls </option>
+                    <option> Aquarium </option>
+                    <option> Parks & Rooms </option>
+
+                </select> 
+            </div>
+        
+            <div>
+                <label for="heading">
+                    <b>Description</b>
+                </label>
+                <input type="text" placeholder="short description" id="description">
+            </div>
+
+            <!----------------------- Adding Malls form  ------------------------------>
+        
+        <div>
+            <label for="image">Banner</label>
+            <input type="text" placeholder="enter your url" id="banner" />
+        </div>
+
+        <div>
+            <label for="text">Description</label>
+            <textarea name="paragraph_text" cols="50" rows="10" id="descptn"></textarea>
+
+            <label for="text">Information</label>
+            <textarea name="paragraph_text" cols="50" rows="10" id="info"></textarea>
+        </div>
+
+        <div>
+            <label for="image">Famous Food Branches</label>
+<br>
+            <label>Branch 1</label>
+            <input type="text" placeholder="Enter your url" id="img1">
+            <input type="text" placeholder="Enter food branch name" id="name1">
+            <input type="text" placeholder="Opening & closing time" id="abt1">
+<br>
+            <label>Branch 2</label>
+            <input type="text" placeholder="Enter your url" id="img2">
+            <input type="text" placeholder="Enter food branch name" id="name2">
+            <input type="text" placeholder="Opening & closing time" id="abt2">
+<br>
+            <label>Branch 3</label>
+            <input type="text" placeholder="Enter your url" id="img3">
+            <input type="text" placeholder="Enter food branch name" id="name3">
+            <input type="text" placeholder="Opening & closing time" id="abt3">
+
+<br>
+            <label>Branch 4</label>
+            <input type="text" placeholder="Enter your url" id="img4">
+            <input type="text" placeholder="Enter food branch name" id="name4">
+            <input type="text" placeholder="Opening & closing time " id="abt4">
+<br>
+            <label>Branch 5</label>
+            <input type="text" placeholder="Enter your url" id="img5">
+            <input type="text" placeholder="Enter food branch name" id="name5">
+            <input type="text" placeholder="Opening & closing time " id="abt5">
+
+        </div>
+
+        <div>
+            <label for="image">Popular Branches</label>
+<br>
+            <label>Store 1</label>
+            <input type="text" placeholder="Enter your url" id="image1">
+            <input type="text" placeholder="Enter Brand name" id="brandname1">
+            <input type="text" placeholder="About Brand " id="abt_brand1">
+<br>
+            <label>Store 2</label>
+            <input type="text" placeholder="Enter your url" id="image2">
+            <input type="text" placeholder="Enter Brand name" id="brandname2">
+            <input type="text" placeholder="About Brand " id="abt_brand2">
+<br>
+            <label>Store 3</label>
+            <input type="text" placeholder="Enter your url" id="image3">
+            <input type="text" placeholder="Enter Brand name" id="brandname3">
+            <input type="text" placeholder="About Brand " id="abt_brand3">
+<br>
+
+            <label>Store 4</label>
+            <input type="text" placeholder="Enter your url" id="image4">
+            <input type="text" placeholder="Enter Brand name" id="brandname4">
+            <input type="text" placeholder="About Brand " id="abt_brand4">
+<br>
+
+            <label>Store 5</label>
+            <input type="text" placeholder="Enter your url" id="image5">
+            <input type="text" placeholder="Enter Brand name" id="brandname5">
+            <input type="text" placeholder="About Brand " id="abt_brand5">
+<br>
+
+            <label>Store 6</label>
+            <input type="text" placeholder="Enter your url" id="image6">
+            <input type="text" placeholder="Enter Brand name" id="brandname6">
+            <input type="text" placeholder="About Brand " id="abt_brand6">
+<br>
+            <label>Store 7</label>
+            <input type="text" placeholder="Enter your url" id="image7">
+            <input type="text" placeholder="Enter Brand name" id="brandname7">
+            <input type="text" placeholder="About Brand " id="abt_brand7">
+<br>
+            <label>Store 8</label>
+            <input type="text" placeholder="Enter your url" id="image8">
+            <input type="text" placeholder="Enter Brand name" id="brandname8">
+            <input type="text" placeholder="About Brand " id="abt_brand8">
+<br>
+        </div>
+
+        <button type="submit" class="button" id="upload">create</button>
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+    <script>document
+  .getElementById("upload")
+  .addEventListener("click", function register(e) {
+      e.preventDefault();
+
+      const all_places = document.getElementById("area").value;
+      const category_name = document.getElementById("category").value;
+      const image = document.getElementById("image").value;
+      const placeName = document.getElementById("place_name").value;
+      const description = document.getElementById("description").value;
+      const detail_page = document.getElementById("detail_page").value;
+      const banner = document.getElementById("banner").value;
+      const Descptn = document.getElementById("descptn").value;
+      const Information = document.getElementById("info").value;
+
+      const branch1Img1 = document.getElementById("img1").value;
+      const branch1Name1 = document.getElementById("name1").value;
+      const branch1time1 = document.getElementById("abt1").value;
+
+      const branch2Img2 = document.getElementById("img2").value;
+      const branch2Name2 = document.getElementById("name2").value;
+      const branch2time2 = document.getElementById("abt2").value;
+
+      const branch3Img3 = document.getElementById("img3").value;
+      const branch3Name3 = document.getElementById("name3").value;
+      const branch3time3 = document.getElementById("abt3").value;
+
+      const branch4Img4 = document.getElementById("img4").value;
+      const branch4Name4 = document.getElementById("name4").value;
+      const branch4time4 = document.getElementById("abt4").value;
+
+      const branch5Img5 = document.getElementById("img5").value;
+      const branch5Name5 = document.getElementById("name5").value;
+      const branch5time5 = document.getElementById("abt5").value;
+
+      const store1img1 = document.getElementById("image1").value;
+      const store1name1 = document.getElementById("brandname1").value;
+      const store1abt1 = document.getElementById("abt_brand1").value;
+
+      const store2img2 = document.getElementById("image2").value;
+      const store2name2 = document.getElementById("brandname2").value;
+      const store2abt2 = document.getElementById("abt_brand2").value;
+
+      const store3img3 = document.getElementById("image3").value;
+      const store3name3 = document.getElementById("brandname3").value;
+      const store3abt3 = document.getElementById("abt_brand3").value;
+
+      const store4img4 = document.getElementById("image4").value;
+      const store4name4 = document.getElementById("brandname4").value;
+      const store4abt4 = document.getElementById("abt_brand4").value;
+
+      const store5img5 = document.getElementById("image5").value;
+      const store5name5 = document.getElementById("brandname5").value;
+      const store5abt5 = document.getElementById("abt_brand5").value;
+
+      const store6img6 = document.getElementById("image6").value;
+      const store6name6 = document.getElementById("brandname6").value;
+      const store6abt6 = document.getElementById("abt_brand6").value;
+
+      const store7img7 = document.getElementById("image7").value;
+      const store7name7 = document.getElementById("brandname7").value;
+      const store7abt7 = document.getElementById("abt_brand7").value;
+
+      const store8img8 = document.getElementById("image8").value;
+      const store8name8 = document.getElementById("brandname8").value;
+      const store8abt8 = document.getElementById("abt_brand8").value;
+
+      unique_id = uuidv4();
+      const details = JSON.parse(localStorage.getItem("places")) || [];
+      const exist = details.some((data) => data.place_name === placeName);
+
+      if (!exist) {
+        details.push({
+          area: all_places,
+          category_name,
+          unique_id,
+          image_link: image,
+          place_name: placeName,
+          description,
+          detail_page,
+          banner,
+          Descptn,
+          Information,
+          branch1Img: branch1Img1,
+          branch1Name: branch1Name1,
+          branch1time: branch1time1,
+          branch2Img: branch2Img2,
+          branch2Name: branch2Name2,
+          branch2time: branch2time2,
+          branch3Img: branch3Img3,
+          branch3Name: branch3Name3,
+          branch3time: branch3time3,
+          branch4Img: branch4Img4,
+          branch4Name: branch4Name4,
+          branch4time: branch4time4,
+          branch5Img: branch5Img5,
+          branch5Name: branch5Name5,
+          branch5time: branch5time5,
+          store1Img: store1img1,
+          store1Name: store1name1,
+          store1Abt: store1abt1,
+          store2Img: store2img2,
+          store2Name: store2name2,
+          store2Abt: store2abt2,
+          store3Img: store3img3,
+          store3Name: store3name3,
+          store3Abt: store3abt3,
+          store4Img: store4img4,
+          store4Name: store4name4,
+          store4Abt: store4abt4,
+          store5Img: store5img5,
+          store5Name: store5name5,
+          store5Abt: store5abt5,
+          store6Img: store6img6,
+          store6Name: store6name6,
+          store6Abt: store6abt6,
+          store7Img: store7img7,
+          store7Name: store7name7,
+          store7Abt: store7abt7,
+          store8Img: store8img8,
+          store8Name: store8name8,
+          store8Abt: store8abt8,
+        });
+        localStorage.setItem("places", JSON.stringify(details));
+        // document.querySelector("form").reset();
+        alert("Catergorey created successfully");
+      } else {
+        alert("Sorry, place name has already exist");
+      }
+  });
+
+const ctyList = JSON.parse(localStorage.getItem("category_list"));
+for (let i = 0; i < ctyList.length; i++) {
+  const cty_li = document.createElement("option");
+
+  cty_li.setAttribute("value", ctyList[i].category);
+  cty_li.innerText = ctyList[i].category;
+
+  document.querySelector("#area").append(cty_li);
+  console.log(cty_li);
+}
+    </script>
+
+    <script src="/pages/index/header.js"></script>
+</body>
+</html>

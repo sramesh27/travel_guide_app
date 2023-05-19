@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>update and delete Nungambakkam</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/places_list.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+</style>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <!-- <header>
+            <div class="head-nav">
+            <div class="header">
+            <img src="../../assets/images/web logo.png" alt="logo" width="100"/>
+            <p><B>TRAVEL GUIDE</B></p>
+            </div>
+            </div>
+            <div class="navbar">
+            <ul>
+            <li> <a class="navbar-1" href="/index.html"> <b>HOME</b></a></li>
+            <li> <a class="navbar-1" href="../../pages/other pages/about us.html"><b> ABOUT</b></a></li>
+            <li> <a class="navbar-1" href="../../pages/other pages/contact.html"><b>CONTACT</b></a></li>
+            <li> <a class="navbar-1" href="../../pages/other pages/suggest.html"><b> SUGGEST</b></a></li>
+            </ul>
+            </div>
+            </header> -->
+        <h1> Fun Places In Nungambakkam</h1>
+        <section class="section-1">
+        </section>
+    
+        <section>
+            <div class="footer">
+                <div class="footer_1">
+                    <div class="flex-footer">
+                        <img src="../../assets/images/web logo.png" width="80" height="60" alt="logo">
+                        <h4>TRAVEL GUIDE</h4>
+                    </div>
+                    <p>
+                        <b>Contact</b>
+                    </p>
+                    <p>Email: saransou008@gmail.com</p>
+                </div>
+                <div class="footer_2">
+                    <ul>
+                        <h3>Quick Links</h3>
+                        <a href="../../pages/other pages/about us.html">
+                            <li> About</li>
+                        </a>
+                        <a href="../../pages/other pages/suggest.html">
+                            <li> Suggest</li>
+                        </a>
+                        <a href="../../pages/other pages/contact.html">
+                            <li> Contact Us</li>
+                        </a>
+            </div>
+                        <div class="footer_3">
+                            <h2>
+                                <b> Subscribe</b>
+                            </h2>
+                            <p> To get more information and keep updated subscribe</p>
+                            <input type="text" placeholder="Email Address" class="input">
+                            <button class="btn-1" type="button"> Send</button>
+                        </div>
+        </div>
+    </section>
+                        <script>
+        const nungambakkam = JSON.parse(localStorage.getItem("nungambakkam_details"));
+let div_flex;
+let div_img;
+let div_image;
+let div_para;
+let div_about_p;
+let div_about_b;
+let div_text;
+let div_text_2;
+let div_text_a;
+
+for (i = 0; i < nungambakkam.length; i++) {
+  div_flex = document.createElement("div");
+  div_flex.setAttribute("class", "flex");
+  document.querySelector(".section-1").append(div_flex);
+  console.log(div_flex);
+
+  div_img = document.createElement("div");
+  div_img.setAttribute("class", "img");
+  div_flex.append(div_img);
+
+  div_image = document.createElement("img");
+  div_image.setAttribute("src", nungambakkam[i].image_link);
+  div_image.setAttribute("id", "place_image");
+  div_img.append(div_image);
+
+  div_para = document.createElement("div");
+  div_para.setAttribute("class", "para");
+  div_flex.append(div_para);
+
+  heading = document.createElement("h2");
+  heading.innerText = nungambakkam[i].place_name;
+  div_para.append(heading);
+
+  div_about_p = document.createElement("p");
+  div_para.append(div_about_p);
+
+  div_about_b = document.createElement("b");
+  div_about_b.innerText = "About";
+  div_about_p.append(div_about_b);
+
+  div_text = document.createElement("p");
+  div_text.innerText = nungambakkam[i].description;
+  div_para.append(div_text);
+
+  div_text_2 = document.createElement("p");
+  div_text_2.innerText = "For more details ";
+  div_para.append(div_text_2);
+
+  div_text_a = document.createElement("a");
+  div_text_a.innerText = "Click here";
+  div_text_a.setAttribute("href", nungambakkam[i].detail_page);
+  div_text_2.append(div_text_a);
+
+  rating = document.createElement("p");
+  rating.innerText = "Rating";
+  div_text_2.append(rating);
+
+  for (j = 0; j < 5; j++) {
+        star_span = document.createElement("span");
+        star_span.setAttribute("class", "fa fa-star checked");
+        star_span.setAttribute("style", "font-size:24px");
+        div_para.append(star_span);
+  }
+
+  div_button_edit = document.createElement("button");
+  div_button_edit.setAttribute("class", "edit_button");
+  div_button_edit.setAttribute("data-id", nungambakkam[i].unique_id);
+  div_button_edit.innerText = "edit";
+  star_span.append(div_button_edit);
+
+  div_button_del = document.createElement("button");
+  div_button_del.setAttribute("class", "del_button");
+  div_button_del.setAttribute("data-del", nungambakkam[i].unique_id);
+  div_button_del.innerText = "delete";
+  div_button_del.setAttribute("onclick", "del()");
+  star_span.append(div_button_del);
+  document.querySelector("section.section-1").append(div_flex);
+}
+// -------------------------------TO EDIT THE PLACES---------------------------------
+
+const edit = document.querySelectorAll("button.edit_button");
+edit.forEach(function (to_edit) {
+  to_edit.addEventListener("click", function () {
+            const uuid = this.dataset.id;
+        console.log(uuid);
+        localStorage.setItem("Id", JSON.stringify(uuid));
+        window.location.href = "../../pages/admin page/edit_form.html";
+  });
+});
+
+// --------------------------------TO DELETE PLACES-----------------------------------
+
+const delete_btn = document.querySelectorAll("button.del_button");
+delete_btn.forEach(function (to_del) {
+  to_del.addEventListener("click", function () {
+        const u_id = this.dataset.del;
+        console.log(u_id);
+        localStorage.setItem("Place_uuid", JSON.stringify(u_id));
+
+        const all_places = JSON.parse(localStorage.getItem("nungambakkam_details"));
+
+            const check = all_places.find((e) => e.unique_id == u_id);
+        console.log(check);
+        const indexOfUser = all_places.indexOf(check);
+        console.log(indexOfUser);
+        all_places.splice(indexOfUser, 1);
+        localStorage.setItem("nungambakkam_details", JSON.stringify(all_places));
+  });
+});
+    </script>
+    
+ </body>
+</html>

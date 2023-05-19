@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> login page </title>
+        <link rel="stylesheet" href="../../css/login.css">
+        <link rel="stylesheet" href="../../css/header.css">
+    </head>
+
+    <body>
+        <img class="img" src="../../assets/images/eiffel-tower.webp" height="800px" width="130px">
+        <div class="flex">
+            <img class="img-small" src="../../assets/images/eiffel-tower.webp" height="500px" width="600px">
+
+            <section class="container">
+                <h1 class="heading"> Log-in </h1>
+                <div>
+                    <option class="font">Email</option>
+                    <input class="box" id="email">
+                </div>
+                <div>
+                    <option class="font-box">Password</option>
+                    <input class="box" id="password" type="password">
+                    <p class="password"> Forget Password?</p>
+                </div>
+                <div>
+                    <p>
+                        Doesn't have an account? <a href = "../index/register.html">Create account </a>
+                    </p>
+                </div>
+                <div>
+                    <button class="btn" type="button" id="login" onclick="login()">Log In </button>
+                </div>
+                <div>
+                    <button class="btn1" type="button">Continue with Google</button>
+                    <img class="google" src="../../assets/images/google-logo.png" height="20px" width="20px">
+                </div>
+            </section>
+    
+        </div>
+        <script>function login() {
+          const user_detail = {
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
+  };
+          const stored_data = JSON.parse(localStorage.getItem("users"));
+          let found = false;
+          for (let i = 0; i < stored_data.length; i++) {
+              if (
+      user_detail.email == stored_data[i].email &&
+      user_detail.password == stored_data[i].psw
+              ) {
+      alert("You are logged in..");
+
+                found = true;
+                localStorage.setItem("unique_id", JSON.stringify(user_detail.email));
+                location.href = "/index.html";
+                break;
+              }
+          }
+          if (!found) {
+              alert("Incorrect value");
+            document.querySelector("form").reset();
+            }
+}
+</script>
+        <script src="./header.js"> </script>
+    </body>
+
+</html>
